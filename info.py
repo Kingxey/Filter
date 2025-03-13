@@ -21,9 +21,9 @@ def is_enabled(value, default):
 PORT = environ.get("PORT", "8080")
 WEBHOOK = bool(environ.get("WEBHOOK", True)) # for web support on/off
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '') 
-BOT_TOKEN = environ.get('BOT_TOKEN', '') 
+API_ID = int(environ.get('API_ID', '24817837'))
+API_HASH = environ.get('API_HASH', 'acd9f0cc6beb08ce59383cf250052686') 
+BOT_TOKEN = environ.get('BOT_TOKEN', '7606613494:AAHc-vHZ0fW4PKHuIeIATWRwfEX63NsAGGY') 
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 800))
@@ -34,16 +34,16 @@ BOT_START_TIME = time()
 # Admins, Channels & Users
 # Admins, Channels & Users
 CACHE_TIME = int(environ.get('CACHE_TIME', 800)) 
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5814104129 1687928453 hyoshdesign').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5814104129 7428552084 kingcey').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '5814104129 1687928453').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '7428552084 1687928453').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1002049629020')
-auth_grp = environ.get('AUTH_GROUP', '-1002293866874 -1002229122792 -1002165407793')
+auth_channel = environ.get('AUTH_CHANNEL', '-1002376378205')
+auth_grp = environ.get('AUTH_GROUP', '-1002427882015')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URL', "")
+DATABASE_URI = environ.get('DATABASE_URL', "mongodb+srv://altof2:123Bonjoure@cluster0.s1suq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "bot")
 FILE_DB_URL = environ.get("FILE_DB_URL", DATABASE_URI)
 FILE_DB_NAME = environ.get("FILE_DB_NAME", DATABASE_NAME)
